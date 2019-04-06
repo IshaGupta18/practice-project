@@ -1,0 +1,23 @@
+<h1> Welcome to Practice </h1>
+<br>
+<br>
+<br>
+<h4> Sign In </h4>
+<h5> (if registered) </h5>
+<%= form_tag users_create_session_path, method: :post do %>
+	<%= label_tag :email %>
+	<%= email_field_tag :email %>
+	<br>
+	
+	<%= label_tag :password %>
+	<%= password_field_tag :password %>
+
+	<br>
+
+	<%= submit_tag "sign in" %>
+<% end %>
+
+<br>
+
+<h5> Not yet registered? </h5>
+<%= link_to('Create New Account', {controller=>'users', :action=>'new'}) %>
